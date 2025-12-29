@@ -1,0 +1,345 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CV - Jimin Jeon</title>
+    <meta name="author" content="Jimin Jeon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <!-- Using EB Garamond for a polished academic look, similar to the reference's serif -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'EB Garamond', 'Times New Roman', serif;
+        font-size: 11pt;
+        line-height: 1.4;
+        color: #000; /* Pure black for that LaTeX look */
+        background: #fff;
+      }
+      
+      .cv-container {
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0.6in 0.8in; /* Matches the reference margins */
+        min-height: 11in;
+        position: relative;
+      }
+      
+      /* Download Button - Top Left Fixed */
+      .download-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: white;
+        color: #444;
+        border: 1px solid #ccc;
+        padding: 6px 12px;
+        border-radius: 3px;
+        font-family: sans-serif;
+        font-size: 12px;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        z-index: 1000;
+        transition: all 0.2s;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+      
+      .download-btn:hover {
+        background: #f5f5f5;
+        border-color: #999;
+        color: #000;
+      }
+      
+      /* Header - Centered */
+      .cv-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .cv-header h1 {
+        font-size: 20pt; /* Large but not huge */
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #000;
+      }
+      
+      .header-details {
+        font-size: 11pt;
+        margin-bottom: 4px;
+      }
+      
+      .header-contact a {
+        color: #000;
+        text-decoration: none;
+      }
+      
+      .header-contact a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Sections */
+      .cv-section {
+        margin-bottom: 1.5rem;
+      }
+      
+      .cv-section h2 {
+        font-size: 12pt;
+        font-weight: 700;
+        text-transform: capitalize; /* "Education", not "EDUCATION" */
+        border-bottom: 1px solid #000; /* Full width underline */
+        padding-bottom: 2px;
+        margin-bottom: 10px;
+        color: #000;
+      }
+      
+      /* Entries */
+      .cv-entry {
+        margin-bottom: 12px;
+      }
+      
+      /* Line 1: Bold Title (Left) + Date (Right) */
+      .entry-line-1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 2px;
+      }
+      
+      .entry-title {
+        font-weight: 700;
+        font-size: 11pt;
+      }
+      
+      .entry-date {
+        font-style: italic;
+        font-size: 11pt;
+        text-align: right;
+      }
+      
+      /* Line 2: Institution/Subtitle (Left) */
+      .entry-line-2 {
+        margin-bottom: 2px;
+        font-size: 11pt;
+      }
+      
+      /* Line 3+: Details */
+      .entry-details ul {
+        margin: 2px 0 0 18px; /* Indent bullets */
+        padding: 0;
+        list-style-type: disc;
+      }
+      
+      .entry-details li {
+        margin-bottom: 2px;
+        text-align: justify;
+        font-size: 11pt;
+      }
+      
+      /* Misc Helpers */
+      .bullet-point {
+        margin-right: 4px;
+      }
+      
+      /* Print Styles */
+      @media print {
+        @page {
+          margin: 0.6in 0.8in;
+          size: letter;
+        }
+        body {
+          background: white;
+          -webkit-print-color-adjust: exact;
+        }
+        .cv-container {
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          max-width: 100%;
+        }
+        .download-btn, .back-link {
+          display: none !important;
+        }
+        .cv-section {
+          page-break-inside: avoid;
+        }
+      }
+
+      /* Screen specific adjustments */
+      @media screen {
+        .cv-container {
+          box-shadow: 0 0 10px rgba(0,0,0,0.1);
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Download Button -->
+    <button class="download-btn" onclick="window.print()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+       PDF
+    </button>
+
+    <div class="cv-container">
+      <!-- Header -->
+      <header class="cv-header">
+        <h1>Jimin Jeon</h1>
+        <div class="header-details">Electrical Engineering and Computer Science</div>
+        <div class="header-details">Gwangju Institute of Science and Technology (GIST)</div>
+        <div class="header-contact">
+          <a href="mailto:jiminc77@gm.gist.ac.kr">jiminc77@gm.gist.ac.kr</a>
+        </div>
+      </header>
+
+      <!-- Education Section -->
+      <section class="cv-section">
+        <h2>Education</h2>
+        
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Gwangju Institute of Science and Technology (GIST)</span>
+            <span class="entry-date">Mar. 2021 – Present</span>
+          </div>
+          <div class="entry-line-2">B.S. in Electrical Engineering and Computer Science (GPA: 3.8/4.5)</div>
+        </div>
+        
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">University of California, Berkeley</span>
+            <span class="entry-date">Jun. 2022 – Aug. 2022</span>
+          </div>
+          <div class="entry-line-2">Summer Sessions — Computer Science</div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="cv-section">
+        <h2>Research Experiences</h2> <!-- Changed title to match reference style -->
+        
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Undergraduate Research Intern</span>
+            <span class="entry-date">Sep. 2025 – Present</span>
+          </div>
+          <div class="entry-line-2">GIST AI Lab (Prof. Kyoobin Lee)</div>
+          <div class="entry-details">
+            <ul>
+              <li>Implemented a bimanual robotic system for energy facility maintenance using GELLO-based teleoperation and ACT policies.</li>
+              <li>Achieved over 90% success rate in autonomous manipulation tasks including panel opening, switch operation, and voltage checking.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">AI Developer Intern</span>
+            <span class="entry-date">Jun. 2025 – Aug. 2025</span>
+          </div>
+          <div class="entry-line-2">PIASPACE</div>
+          <div class="entry-details">
+            <ul>
+              <li>Proposed novel learnable similarity method for CLIP-based encoders, outperforming existing adapters</li>
+              <li>Successfully integrated method into company's production model, improving classification accuracy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Undergraduate Research Intern</span>
+            <span class="entry-date">Dec. 2022 – Jun. 2023</span>
+          </div>
+          <div class="entry-line-2">GIST AI Lab (Prof. Kyoobin Lee)</div>
+          <div class="entry-details">
+            <ul>
+              <li>Developed image-based model for automated vehicle scratch detection, enabling before/after comparison for car rental services</li>
+              <li>Built expiration date recognition system: detection, masking, cropping, and OCR across multiple packaging formats</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">D2SF Campus Partner</span>
+            <span class="entry-date">Mar. 2022 – Feb. 2023</span>
+          </div>
+          <div class="entry-line-2">NAVER D2SF</div>
+          <div class="entry-details">
+            <ul>
+              <li>Sourced and evaluated university-based startup teams for NAVER's startup investment fund</li>
+              <li>Analyzed emerging startup trends across Korean universities</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Teaching Section -->
+      <section class="cv-section">
+        <h2>Teaching Experience</h2>
+        
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Teaching Assistant</span>
+            <span class="entry-date">Sep. 2025 – Dec. 2025</span>
+          </div>
+          <div class="entry-line-2">AI5213/EC4213 Machine Learning and Deep Learning, GIST</div>
+          <div class="entry-details">
+            <ul>
+              <li>Assisted in course delivery for graduate and undergraduate machine learning course</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards Section -->
+      <section class="cv-section">
+        <h2>Awards and Honors</h2> <!-- Title matched to reference style -->
+        
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">GIST AI Lab Director's Award</span>
+            <span class="entry-date">2025</span>
+          </div>
+          <div class="entry-line-2">Impact AI Hackathon</div>
+        </div>
+        
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Innovation Award</span>
+            <span class="entry-date">2024</span>
+          </div>
+          <div class="entry-line-2">Defense Start-up Challenge, Ministry of National Defense</div>
+          <div class="entry-details">
+            <ul>
+              <li>Founder of '든든行' — Hospital Companion Manager Matching Platform</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Excellence Award</span>
+            <span class="entry-date">2024</span>
+          </div>
+          <div class="entry-line-2">11th Army Startup Competition, Republic of Korea Army</div>
+          <div class="entry-details">
+            <ul>
+              <li>Founder of '든든행' — Hospital Companion Manager Matching Platform</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
