@@ -84,6 +84,13 @@ a {
   font-size: 14px;
 }
 
+html,
+body {
+  background-color: #fff;
+  color: #000;
+  color-scheme: only light;
+}
+
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
