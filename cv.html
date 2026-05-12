@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <!-- Using EB Garamond for a polished academic look, similar to the reference's serif -->
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap"
+      rel="stylesheet">
     <style>
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
-      
+
       body {
         font-family: 'EB Garamond', 'Times New Roman', serif;
         font-size: 11pt;
@@ -22,7 +23,7 @@
         color: #000; /* Pure black for that LaTeX look */
         background: #fff;
       }
-      
+
       .cv-container {
         max-width: 8.5in;
         margin: 0 auto;
@@ -30,7 +31,7 @@
         min-height: 11in;
         position: relative;
       }
-      
+
       /* Download Button - Top Left Fixed */
       .download-btn {
         position: fixed;
@@ -52,103 +53,111 @@
         transition: all 0.2s;
         box-shadow: 0 1px 3px rgba(0,0,0,0.1);
       }
-      
+
       .download-btn:hover {
         background: #f5f5f5;
         border-color: #999;
         color: #000;
       }
-      
+
       /* Header - Centered */
       .cv-header {
         text-align: center;
         margin-bottom: 2rem;
       }
-      
+
       .cv-header h1 {
         font-size: 20pt; /* Large but not huge */
         font-weight: 700;
         margin-bottom: 8px;
         color: #000;
       }
-      
+
       .header-details {
         font-size: 11pt;
         margin-bottom: 4px;
       }
-      
+
       .header-contact a {
         color: #000;
         text-decoration: none;
       }
-      
-      .header-contact a:hover {
+
+      .cv-container a {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .cv-container a:hover {
         text-decoration: underline;
       }
-      
+
       /* Sections */
       .cv-section {
         margin-bottom: 1.5rem;
       }
-      
+
       .cv-section h2 {
         font-size: 12pt;
         font-weight: 700;
-        text-transform: capitalize; /* "Education", not "EDUCATION" */
         border-bottom: 1px solid #000; /* Full width underline */
         padding-bottom: 2px;
         margin-bottom: 10px;
         color: #000;
       }
-      
+
       /* Entries */
       .cv-entry {
         margin-bottom: 12px;
       }
-      
+
       /* Line 1: Bold Title (Left) + Date (Right) */
       .entry-line-1 {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        gap: 16px;
         margin-bottom: 2px;
       }
-      
+
       .entry-title {
         font-weight: 700;
         font-size: 11pt;
+        flex: 1;
+        min-width: 0;
       }
-      
+
       .entry-date {
         font-style: italic;
         font-size: 11pt;
         text-align: right;
+        flex-shrink: 0;
       }
-      
+
       /* Line 2: Institution/Subtitle (Left) */
       .entry-line-2 {
         margin-bottom: 2px;
         font-size: 11pt;
       }
-      
+
       /* Line 3+: Details */
       .entry-details ul {
         margin: 2px 0 0 18px; /* Indent bullets */
         padding: 0;
         list-style-type: disc;
       }
-      
+
       .entry-details li {
         margin-bottom: 2px;
         text-align: justify;
         font-size: 11pt;
       }
-      
+
       /* Misc Helpers */
       .bullet-point {
         margin-right: 4px;
       }
-      
+
       /* Print Styles */
       @media print {
         @page {
@@ -198,14 +207,17 @@
         <div class="header-details">Electrical Engineering and Computer Science</div>
         <div class="header-details">Gwangju Institute of Science and Technology (GIST)</div>
         <div class="header-contact">
-          <a href="mailto:jiminc77@gm.gist.ac.kr">jiminc77@gm.gist.ac.kr</a>
+          <a href="mailto:jiminc77@gm.gist.ac.kr">jiminc77@gm.gist.ac.kr</a> |
+          <a href="https://jiminc77.github.io/">Homepage</a> |
+          <a href="https://www.linkedin.com/in/jimin-jeon-87782a283/">LinkedIn</a> |
+          <a href="https://github.com/jiminc77">GitHub</a>
         </div>
       </header>
 
       <!-- Education Section -->
       <section class="cv-section">
         <h2>Education</h2>
-        
+
         <div class="cv-entry">
           <div class="entry-line-1">
             <span class="entry-title">Gwangju Institute of Science and Technology (GIST)</span>
@@ -213,7 +225,7 @@
           </div>
           <div class="entry-line-2">B.S. in Electrical Engineering and Computer Science (GPA: 3.8/4.5)</div>
         </div>
-        
+
         <div class="cv-entry">
           <div class="entry-line-1">
             <span class="entry-title">University of California, Berkeley</span>
@@ -223,20 +235,69 @@
         </div>
       </section>
 
+      <!-- Publications Section -->
+      <section class="cv-section">
+        <h2>Publications</h2>
+      
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">A Hierarchical LLM-Based Framework for Heterogeneous Multi-Robot Orchestration in
+              High-Risk Energy Facility Maintenance</span>
+            <span class="entry-date">2026</span>
+          </div>
+          <div class="entry-line-2">Jungi Lee, Seu-Jan Kim, Geonhyup Lee, Kangmin Kim, <strong>Jimin Jeon</strong>, Seok-Kap
+            Ko, Kyoobin Lee</div>
+          <div class="entry-line-2"><em>IEEE Access</em> | DOI: <a
+              href="https://doi.org/10.1109/ACCESS.2026.3684055">10.1109/ACCESS.2026.3684055</a></div>
+        </div>
+      </section>
+
       <!-- Experience Section -->
       <section class="cv-section">
         <h2>Research Experiences</h2> <!-- Changed title to match reference style -->
-        
-        <div class="cv-entry">
-          <div class="entry-line-1">
-            <span class="entry-title">Undergraduate Research Intern</span>
-            <span class="entry-date">Sep. 2025 – Present</span>
-          </div>
-          <div class="entry-line-2">GIST AI Lab (Prof. Kyoobin Lee)</div>
+
+          <div class="cv-entry">
+            <div class="entry-line-1">
+              <span class="entry-title">Undergraduate Researcher</span>
+              <span class="entry-date">May. 2026 – Current</span>
+            </div>
+            <div class="entry-line-2">GIST AI - AILAB (Prof. Kyoobin Lee)</div>
           <div class="entry-details">
             <ul>
-              <li>Implemented a bimanual robotic system for energy facility maintenance using GELLO-based teleoperation and ACT policies.</li>
-              <li>Achieved over 90% success rate in autonomous manipulation tasks including panel opening, switch operation, and voltage checking.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Visiting Undergraduate Researcher</span>
+            <span class="entry-date">Jan. 2026 – Apr. 2026</span>
+            </div>
+            <div class="entry-line-2">HUSL, University of Hartford</div>
+            <div class="entry-details">
+              <ul>
+                <li>Developed DexTel, a single-camera real-time teleoperation system for robot arms using RGB-D perception,
+                  MediaPipe, HaMeR, and Dex-Retargeting.</li>
+                <li>Built an LLM-driven drone control framework via ROS-MCP, enabling natural-language command interpretation and
+                  tool-based control of a PX4-based drone.</li>
+              </ul>
+          </div>
+          </div>
+          
+          <div class="cv-entry">
+            <div class="entry-line-1">
+              <span class="entry-title">Undergraduate Researcher</span>
+              <span class="entry-date">Sep. 2025 – Jan. 2026</span>
+            </div>
+            <div class="entry-line-2">GIST AI - AILAB (Prof. Kyoobin Lee)</div>
+          <div class="entry-details">
+            <ul>
+              <li>Contributed to a hierarchical LLM-based multi-robot orchestration framework for high-risk energy facility
+                maintenance, published in IEEE Access.</li>
+              <li>Implemented a bimanual robotic system for energy facility maintenance using dual Franka Panda robots, GELLO-based
+                teleoperation, and ACT policies.</li>
+              <li>Developed R2S2R Block Stacking, a robust manipulation pipeline using multi-view perception, Isaac Lab simulation,
+                and domain randomization for sim-to-real transfer.</li>
             </ul>
           </div>
         </div>
@@ -257,7 +318,7 @@
 
         <div class="cv-entry">
           <div class="entry-line-1">
-            <span class="entry-title">Undergraduate Research Intern</span>
+            <span class="entry-title">Undergraduate Researcher</span>
             <span class="entry-date">Dec. 2022 – Jun. 2023</span>
           </div>
           <div class="entry-line-2">GIST AI Lab (Prof. Kyoobin Lee)</div>
@@ -287,7 +348,7 @@
       <!-- Teaching Section -->
       <section class="cv-section">
         <h2>Teaching Experience</h2>
-        
+
         <div class="cv-entry">
           <div class="entry-line-1">
             <span class="entry-title">Teaching Assistant</span>
@@ -305,7 +366,23 @@
       <!-- Awards Section -->
       <section class="cv-section">
         <h2>Awards and Honors</h2> <!-- Title matched to reference style -->
+
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Government-Funded Scholarship</span>
+            <span class="entry-date">Mar. 2021 – Present</span>
+          </div>
+          <div class="entry-line-2">Gwangju Institute of Science and Technology (GIST)</div>
+        </div>
         
+        <div class="cv-entry">
+          <div class="entry-line-1">
+            <span class="entry-title">Academic Excellence Scholarship</span>
+            <span class="entry-date">Spring 2021, Spring 2025, Fall 2025</span>
+          </div>
+          <div class="entry-line-2">Gwangju Institute of Science and Technology (GIST)</div>
+        </div>
+
         <div class="cv-entry">
           <div class="entry-line-1">
             <span class="entry-title">GIST AI Lab Director's Award</span>
@@ -313,7 +390,7 @@
           </div>
           <div class="entry-line-2">Impact AI Hackathon</div>
         </div>
-        
+
         <div class="cv-entry">
           <div class="entry-line-1">
             <span class="entry-title">Innovation Award</span>
@@ -326,7 +403,7 @@
             </ul>
           </div>
         </div>
-        
+
         <div class="cv-entry">
           <div class="entry-line-1">
             <span class="entry-title">Excellence Award</span>
